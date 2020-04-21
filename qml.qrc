@@ -4,5 +4,7 @@
         <file>qtquickcontrols2.conf</file>
         <file>icons/myava.jpg</file>
         <file>ContactItem.qml</file>
+        <file>ContactList.qml</file>
+        <file>MainToolBar.qml</file>
     </qresource>
 </RCC>
