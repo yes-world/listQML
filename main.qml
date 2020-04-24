@@ -13,12 +13,18 @@ Window {
         id: contactsModel
         ListElement {
             name: "Cаня"
+            avatar: "icons/0.jpg"
+            lastMessage: "Последнее сообщение Сани"
         }
         ListElement {
             name: "Анон"
+            avatar: "icons/1.jpg"
+            lastMessage: "Последнее сообщение, которое я оправил Анону"
         }
         ListElement {
             name: "Таня"
+            avatar: "icons/2.jpg"
+            lastMessage: "Стикер"
         }
     }
 

@@ -7,7 +7,7 @@ Rectangle {
     id: me
     property alias icon: icon.source
     property alias text: labelName.text
-    property string message: "Здесь должно быть последнее сообщение"    //в моем представлении сюда передается текст последнего сообщения
+    property alias message: labelMessage.text
     property bool selected: false
 
     signal leftClick()
@@ -34,7 +34,7 @@ Rectangle {
         /*Закругление картинки. Это самая простая, но очень медленная реализация.
           Находил несколько способов, но понял только этот. Написано, что при большом кол-ве
           элементов будет лагать, и что с такой реализацией нельзя выпускать приложение.*/
-        Rectangle { //Для позтционирования всей конструкции выбрал rectangle
+        Rectangle { //Для позиционирования всей конструкции выбрал rectangle
             Layout.fillHeight: true
             Layout.preferredWidth: height
             Layout.margins: 8
@@ -71,19 +71,19 @@ Rectangle {
             }
 
             Label { //сообщение
+                id: labelMessage
                 Layout.fillWidth: true
                 color: "gray"
-                text: me.message
                 elide: Text.ElideRight  //длинные сообщения урезаются
             }
         }
 
         Image { //просто чтобы было похоже на инстаграмм, никакого практического приенения у меня нет
-            fillMode: Image.PreserveAspectFit
+            fillMode: Image.Stretch
             source: "icons/camera.png"
             Layout.fillHeight: true
             Layout.preferredWidth: height
-            Layout.margins: 20
+            Layout.margins: 15
         }
     }
 
